@@ -1,10 +1,20 @@
 import styles from "./styles.module.scss";
 
-const EditBtn = ({ metodo }) => {
+import EditModal from "./../EditModal";
+import { useState } from "react";
+
+const EditBtn = ({ data, getData }) => {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <button onClick={() => metodo()} className={styles.main}>
-      Edit
-    </button>
+    <>
+      {showModal && (
+        <EditModal getData={getData} data={data} setShowModal={setShowModal} />
+      )}
+
+      <button onClick={() => setShowModal(true)} className={styles.main}>
+        Edit
+      </button>
+    </>
   );
 };
 
