@@ -31,7 +31,9 @@ const Categories = () => {
     <div className={styles.main}>
       {showModal && <Modal getData={getData} setShowModal={setShowModal} />}
       <h1>Categories</h1>
-      <button onClick={() => setShowModal(true)}>Aggiungi</button>
+      <button className={styles.button} onClick={() => setShowModal(true)}>
+        Aggiungi
+      </button>
       <Table
         categoriesState={categoriesState.categories}
         loading={categoriesState.loading}
