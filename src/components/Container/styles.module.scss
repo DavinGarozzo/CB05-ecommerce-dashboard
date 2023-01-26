@@ -3,12 +3,13 @@
 .main {
   width: 100%;
   height: calc(100vh - $header-height);
-  background-color: #ececec;
+  background-color: #fbf1d3;
   display: flex;
   .sxColumn {
     width: 500px;
     height: calc(100vh - $header-height);
     padding: 10px;
+
     @media all and (max-width: 800px) {
       & {
         width: 100px;
@@ -19,5 +20,6 @@
     width: 100%;
     height: calc(100vh - $header-height);
     padding: 10px;
+    color: black;
   }
 }
